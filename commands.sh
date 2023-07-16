@@ -1,0 +1,1 @@
+az webapp up --name vinhwebappudacitypj2 --resource-group Azuredevops --sku B1
