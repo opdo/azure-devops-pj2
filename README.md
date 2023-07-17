@@ -1,51 +1,80 @@
 # Overview
 
-<TODO: complete this with an overview of your project>
+[![Python application test with Github Actions](https://github.com/opdo/azure-devops-pj2/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/opdo/azure-devops-pj2/actions/workflows/pythonapp.yml)
+
+This is a sample Continuous Integration and Continuous Delivery using Azure technologies. Setting up Azure Pipelines to deploy the Application Code to Azure App Services. This repo will enable you to:
+
+- Deploy the app in Azure CloudShell
+- Deploy the app as an Azure App Service
+- Load test
 
 ## Project Plan
-<TODO: Project Plan
 
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+* Trello Board: https://trello.com/b/Rxk23qNx/build-cd-cd-pipeline
+* Project Plan: https://docs.google.com/spreadsheets/d/1VQ4gyWtM0k3aL63_SMB2_ZRmqv9MTRt4WB4Ck2yn2Bg/edit?usp=sharing
 
 ## Instructions
 
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
+* Architectural Diagram
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+![Architectural Diagram](images/cd-diagram.png)
 
 * Project running on Azure App Service
 
+![Project running on Azure App Service](<images/04. Web app.png>)
+
 * Project cloned into Azure Cloud Shell
 
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
+`git clone git@github.com:opdo/azure-devops-pj2.git`
+
+![Project cloned into Azure Cloud Shell](<images/01. Clone pj by ssh.png>)
 
 * Output of a test run
 
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+`make all`
+
+![Passing tests](<images/02. make all.png>)
+
+* Output of GitHub Action build
+
+![Output of GitHub Action build](<images/03. Git action.png>)
+
+* Successful deploy of the project in Azure Pipelines.
+
+![Running Azure App Service from Azure Pipelines automatic deployment](<images/08. Build CI CD.png>)
 
 * Running Azure App Service from Azure Pipelines automatic deployment
 
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
+![Output](<images/09. Website deploy success.png>)
 
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
+* Successful prediction from deployed flask app in Azure Cloud Shell.  
+
+![Prediction from deployed flask app](<images/05. make_predict_azure_app.png>)
 
 * Output of streamed log files from deployed application
 
-> 
+`az webapp log tail`
+
+![az webapp log tail](<images/07. az webapp log tail.png>)
+
+`https://vinhwebappudacitypj2.scm.azurewebsites.net/api/logs/docker`
+
+![Web log](<images/06. Web log.png>)
+
+* Load test
+
+![Load test 1](<images/11. Load test 2.png>)
+
+![Load test 2](<images/12. Load test 3.png>)
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+- Configuration specific branch for specific environment, for example: develop branch for dev environment, release branch for production.
+- Automatically trigger test after successful deployment
+- Automatically deploy the maintenance page interface before deploying to the Production environment
 
 ## Demo 
 
-<TODO: Add link Screencast on YouTube>
+Video demo: 
 
 
