@@ -75,6 +75,6 @@ This is a sample Continuous Integration and Continuous Delivery using Azure tech
 
 ## Demo 
 
-Video demo: 
+Video demo: https://youtu.be/WX0qKXapKJA
 
 
